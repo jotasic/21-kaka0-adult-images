@@ -24,27 +24,16 @@ const Remote = libs_react__WEBPACK_IMPORTED_MODULE_0___default().lazy(() => __we
 const Button = libs_react__WEBPACK_IMPORTED_MODULE_0___default().lazy(() => __webpack_require__.e(/*! import() */ "webpack_container_remote_remote1_Button").then(__webpack_require__.t.bind(__webpack_require__, /*! remote1/Button */ "webpack/container/remote/remote1/Button", 23)));
 
 const App = () => {
-  return /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.BrowserRouter, null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: {
-      margin: '10px',
-      padding: '10px',
-      textAlign: 'center',
-      backgroundColor: 'greenyellow'
-    }
-  }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "HOST"), "HOST ONLY SUPPORTS LIVE RELOAD. GO TO http://localhost:3001 to try out HMR"), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/"
-  }, "Home")), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/remote"
-  }, "Remote")), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/heading"
-  }, "Heading")))), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
+  return /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.BrowserRouter, null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
     fallback: 'loading...'
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Switch, null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
     path: "/button"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null)), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
-    path: "/heading"
+    path: "/21-kaka0-pet-shop-images/button"
+  }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null)), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+    path: "/21-kaka0-pet-shop-images/heading"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement((remote1_Heading__WEBPACK_IMPORTED_MODULE_2___default()), null)), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
-    path: "/remote"
+    path: "/21-kaka0-pet-shop-images/remote"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Remote, null))))));
 };
 
