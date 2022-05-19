@@ -12,14 +12,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var libs_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(libs_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(43);
 /* harmony import */ var libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__);
-var _s = $RefreshSig$();
-
 
 
 
 const Button = () => {
-  _s();
-
   let history = (0,libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useHistory)();
 
   function handleClick() {
@@ -31,16 +27,7 @@ const Button = () => {
   }, "from remote1: GO HOME");
 };
 
-_s(Button, "9cZfZ04734qoCGIctmKX7+sX6eU=", false, function () {
-  return [libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useHistory];
-});
-
-_c = Button;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);
-
-var _c;
-
-$RefreshReg$(_c, "Button");
 
 /***/ })
 

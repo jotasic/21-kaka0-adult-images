@@ -16,12 +16,7 @@ const Heading = () => {
   return /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This is the heading");
 };
 
-_c = Heading;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Heading);
-
-var _c;
-
-$RefreshReg$(_c, "Heading");
 
 /***/ })
 
