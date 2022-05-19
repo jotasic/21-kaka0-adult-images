@@ -29,11 +29,11 @@ const App = () => {
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Switch, null, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
     path: "/button"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null)), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
-    path: "/21-kaka0-pet-shop-images/button"
+    path: "/button"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null)), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
-    path: "/21-kaka0-pet-shop-images/heading"
+    path: "/heading"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement((remote1_Heading__WEBPACK_IMPORTED_MODULE_2___default()), null)), /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(libs_react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
-    path: "/21-kaka0-pet-shop-images/remote"
+    path: "/remote"
   }, /*#__PURE__*/libs_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Remote, null))))));
 };
 
