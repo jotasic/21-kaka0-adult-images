@@ -1,7 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 909:
+/***/ "webpack/container/reference/libs":
+/*!************************************************!*\
+  !*** external "libs@[libsUrl]/remoteEntry.js" ***!
+  \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -19,6 +22,30 @@ module.exports = new Promise((resolve, reject) => {
 		reject(__webpack_error__);
 	}, "libs");
 }).then(() => (libs));
+
+/***/ }),
+
+/***/ "webpack/container/reference/remote1":
+/*!******************************************************!*\
+  !*** external "remote1@[remote1Url]/remoteEntry.js" ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof remote1 !== "undefined") return resolve();
+	__webpack_require__.l(remote1Url + "/remoteEntry.js", (event) => {
+		if(typeof remote1 !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "remote1");
+}).then(() => (remote1));
 
 /***/ })
 
@@ -61,6 +88,36 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -118,7 +175,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "remote1:";
+/******/ 		var dataWebpackPrefix = "host:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -175,23 +232,49 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
-/******/ 			"540": [
-/******/ 				540
+/******/ 			"src_bootstrap_js": [
+/******/ 				"webpack/container/remote/libs/react",
+/******/ 				"webpack/container/remote/libs/react-router-dom",
+/******/ 				"webpack/container/remote/remote1/Heading",
+/******/ 				"webpack/container/remote/libs/react-dom"
 /******/ 			],
-/******/ 			"575": [
-/******/ 				202
+/******/ 			"webpack_container_remote_remote1_RemoteApp": [
+/******/ 				"webpack/container/remote/remote1/RemoteApp"
+/******/ 			],
+/******/ 			"webpack_container_remote_remote1_Button": [
+/******/ 				"webpack/container/remote/remote1/Button"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
-/******/ 			"202": [
-/******/ 				"default",
-/******/ 				"./react-dom",
-/******/ 				909
-/******/ 			],
-/******/ 			"540": [
+/******/ 			"webpack/container/remote/libs/react": [
 /******/ 				"default",
 /******/ 				"./react",
-/******/ 				909
+/******/ 				"webpack/container/reference/libs"
+/******/ 			],
+/******/ 			"webpack/container/remote/libs/react-router-dom": [
+/******/ 				"default",
+/******/ 				"./react-router-dom",
+/******/ 				"webpack/container/reference/libs"
+/******/ 			],
+/******/ 			"webpack/container/remote/remote1/Heading": [
+/******/ 				"default",
+/******/ 				"./Heading",
+/******/ 				"webpack/container/reference/remote1"
+/******/ 			],
+/******/ 			"webpack/container/remote/libs/react-dom": [
+/******/ 				"default",
+/******/ 				"./react-dom",
+/******/ 				"webpack/container/reference/libs"
+/******/ 			],
+/******/ 			"webpack/container/remote/remote1/RemoteApp": [
+/******/ 				"default",
+/******/ 				"./RemoteApp",
+/******/ 				"webpack/container/reference/remote1"
+/******/ 			],
+/******/ 			"webpack/container/remote/remote1/Button": [
+/******/ 				"default",
+/******/ 				"./Button",
+/******/ 				"webpack/container/reference/remote1"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -258,7 +341,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 			var uniqueName = "remote1";
+/******/ 			var uniqueName = "host";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -278,7 +361,8 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					initExternal(909);
+/******/ 					initExternal("webpack/container/reference/libs");
+/******/ 					initExternal("webpack/container/reference/remote1");
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -315,7 +399,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			179: 0
+/******/ 			"main": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -327,7 +411,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(540 != chunkId) {
+/******/ 						if(/^(main|src_bootstrap_js)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -392,7 +476,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkremote1"] = self["webpackChunkremote1"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkhost"] = self["webpackChunkhost"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -401,8 +485,13 @@ module.exports = new Promise((resolve, reject) => {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+// Use dynamic import here to allow webpack to interface with module federation code
+window.remote1Url = 'https://jotasic.github.io/21-kaka0-pet-shop-images/dist';
 window.libsUrl = 'https://jotasic.github.io/21-kaka0-pet-shop-images/lib';
-Promise.all(/* import() */[__webpack_require__.e(540), __webpack_require__.e(575)]).then(__webpack_require__.bind(__webpack_require__, 575));
+__webpack_require__.e(/*! import() */ "src_bootstrap_js").then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ "./src/bootstrap.js"));
 })();
 
 /******/ })()
